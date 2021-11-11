@@ -19,7 +19,7 @@ using QC = Microsoft.Data.SqlClient;
 namespace ASQ_DB
 {
      class DatabaseController
-    {s
+    {
 
         /*
          * FUNCTION    : FlightDataTableConnection
