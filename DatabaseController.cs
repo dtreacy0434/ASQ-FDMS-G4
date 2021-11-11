@@ -1,22 +1,34 @@
-﻿using System;
+﻿/*
+ * FILE            : DatabaseController.cs
+ * PROJECT         : Flight Data Management System
+ * PROGRAMMER      : Daniel Treacy, ASQ Group 4
+ * FIRSTER VERSION : 2021-11-12
+ * DESCRIPTION     :
+ *  This file acts as the contoller between the FDMS and the Azure based SQL database.
+ *  This includes select and insert statements.
+ *  Also able to take data from database and write output file
+ *  NOTE: Requires Microsoft.Data.SqlClient Nuget package.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using DT = System.Data;
 using QC = Microsoft.Data.SqlClient;
 
 namespace ASQ_DB
 {
      class DatabaseController
-    {
+    {s
 
-        
-        
-        /* Function - makes connection to DB for ALL flights
-        *  Return all flight data as TelemData List
-        */
+        /*
+         * FUNCTION    : FlightDataTableConnection
+         * DESCRIPTION : 
+         *  This function is used to open the database connection to acquire all the rows from the database.
+         * PARAMETERS  : None
+         * RETURNS     : 
+         *  List<TelemData> : List representation from all rows with the flight data.
+         */
         public List<TelemData> FlightDataTableConnection()
         {
             using (var connection = new QC.SqlConnection(ConnectionString))
@@ -30,9 +42,15 @@ namespace ASQ_DB
             }
         }
 
-        /* Function - makes connection to DB for SPECIFIC flights
-        *  Return all flight data as TelemData List
-        */
+        /*
+         * FUNCTION    : FlightDataTableConnection
+         * DESCRIPTION : 
+         *  This Overload function is used to open the database connection to acquire all the rows from a specific Aircraft.
+         * PARAMETERS  : 
+         *  string aircraftTail : The call sign of the desired aircraft.
+         * RETURNS     : 
+         *  List<TelemData> : List representation from all rows with the flight data of a specific aircraft.
+         */
         public List<TelemData> FlightDataTableConnection(string aircraftTail)
         {
             using (var connection = new QC.SqlConnection(ConnectionString))
@@ -47,8 +65,13 @@ namespace ASQ_DB
         }
 
         /*
-         * Function - used to pull the data for ALL flights.
-         *
+         * FUNCTION    : SelectFlightData
+         * DESCRIPTION :
+         *  This function writes the SQL query to retrive the telemetary data from all aircraft
+         * PARAMETERS  :
+         *  SqlConnection : open connection object to the database
+         * RETURNS     :
+         *  List<TelemData> : List representation from all rows with the flight data.
          */
         public static List<TelemData> SelectFlightData(QC.SqlConnection connection)
         {
@@ -69,7 +92,8 @@ namespace ASQ_DB
                 {
                     tData.Add(new TelemData()
                     {
-                        StorageTime = reader.GetSqlDateTime(0).ToString(),
+                        //Data was returning time with whitespace and AM/PM, so it was removed
+                        StorageTime = reader.GetDateTime(0).ToString().Remove(reader.GetDateTime(0).ToString().Length - 3, 3),
                         AircraftTailNumber = reader.GetString(1),
                         Altitude = (float)reader.GetSqlDouble(2),
                         Bank = (float)reader.GetSqlDouble(3),
@@ -86,9 +110,15 @@ namespace ASQ_DB
         }
 
         /*
-        * Function - used to pull the data for SPECIFIC flights.
-        *
-        */
+         * FUNCTION    : SelectFlightData
+         * DESCRIPTION :
+         *  This function writes the SQL query to retrive the telemetary data from a specific aircraft
+         * PARAMETERS  :
+         *  SqlConnection connection: open connection object to the database
+         *  string connection : Call sign of desired aircraft
+         * RETURNS     :
+         *  List<TelemData> : List representation from all rows with the flight data from a specitic aircraft.
+         */
         public static List<TelemData> SelectAircraftFlightData(QC.SqlConnection connection, string aircraftTail)
         {
             using (var command = new QC.SqlCommand())
@@ -115,7 +145,8 @@ namespace ASQ_DB
                 {
                     tData.Add(new TelemData()
                     {
-                        StorageTime = reader.GetSqlDateTime(0).ToString(),
+                        //Data was returning time with whitespace and AM/PM, so it was removed
+                        StorageTime = reader.GetDateTime(0).ToString().Remove(reader.GetDateTime(0).ToString().Length-3,3),
                         AircraftTailNumber = reader.GetString(1),
                         Altitude = (float)reader.GetSqlDouble(2),
                         Bank = (float)reader.GetSqlDouble(3),
@@ -126,19 +157,33 @@ namespace ASQ_DB
                         Weight = (float)reader.GetSqlDouble(8),
                     });
                 }
-
+ 
                 return tData;
             }
         }
 
-
         /*
-         * Function - This should be called with the parsed telemdata, it expectes the data to be in dictionary format.
+         * FUNCTION    : InsetConnection
+         * DESCRIPTION :
+         *  Takes the parsed telemetary data and opens the database connection for insert
+         * PARAMETERS  :
+         *  Dictionary<string,string> telemetryData : contains the elements of the parsed telemtary data as a dictionary
+         *  X : string
+         *  Y : string
+         *  Z : string
+         *  Weight : string
+         *  Altitude : string
+         *  Pitch : string
+         *  Bank : string
+         * RETURNS     :
+         *  List<TelemData> : Holds the most recent update of the database after the insert.
          */
-        public void InsertConnection(Dictionary<string,string> telemetryData)
+        public List<TelemData> InsertConnection(Dictionary<string,string> telemetryData)
         {
+            List<TelemData> tData = new List<TelemData>();
 
-            switch (telemetryData["aircraft"])
+            // Convert Aircraft name to ID
+            switch (telemetryData["Aircraft"])
             {
                 case "C-FGAX":
                     telemetryData.Add("AircraftID", "1");
@@ -151,25 +196,32 @@ namespace ASQ_DB
                     break;
                 default:
                     Console.WriteLine("Unknown Aircraft");
-                    return;
+                    return tData = null;
             }
 
             using (var connection = new QC.SqlConnection(ConnectionString))
             {
                 connection.Open();
                 Console.WriteLine("Opened connection");
-                DatabaseController.InsertTelemetry(connection, telemetryData);
+                tData = InsertTelemetry(connection, telemetryData);
                 Console.WriteLine("Closed connection");
                 connection.Close();
             }
+
+            return tData;
         }
 
-
         /*
-         * Function : Used the created connection and telemerty data and inserts it into each of the databases.
-         * 
+         * FUNCTION    : InsertTelemetry
+         * DESCRIPTION :
+         *  Uses the open connection and telemtry data and write to the SQL database
+         * PARAMETERS  :
+         *  SqlConnection connection : Open connection obejct to the databse
+         *  Dictionary<string,string> : Parsed telemetry data to be inserted to the database.
+         * RETURNS     :
+         *  List<TelemData> : Returns the newly updated database rows of all aircraft
          */
-        public static void InsertTelemetry(QC.SqlConnection connection, Dictionary<string, string> telemetryData)
+        public static List<TelemData> InsertTelemetry(QC.SqlConnection connection, Dictionary<string, string> telemetryData)
         {
             QC.SqlParameter parameter;
             using (var command = new QC.SqlCommand())
@@ -183,14 +235,13 @@ namespace ASQ_DB
                  Z,
                  Weight)
                 OUTPUT
-                INSERTED.ID
+                INSERTED.GforceID
                 VALUES
                 (@X,
                  @Y,
                  @Z,
                  @Weight);";
 
-                // Might change float to a real to use less storage
                 parameter = new QC.SqlParameter("@X", DT.SqlDbType.Float);
                 parameter.Value = telemetryData["X"];
                 command.Parameters.Add(parameter);
@@ -207,15 +258,16 @@ namespace ASQ_DB
                 parameter.Value = telemetryData["Weight"];
                 command.Parameters.Add(parameter);
 
+                // Save newly created GforceID for FlightData table
                 int gforceId = (int)command.ExecuteScalar();
 
                 command.CommandText = @"
-                INSERT INTO attidue
+                INSERT INTO Attitude
                 (Altitude,
                  Pitch,
                  Bank)
-                OUPUT
-                INSERTED.ID
+                OUTPUT
+                INSERTED.AttitudeID
                 VALUES
                 (@Altitude,
                  @Pitch,
@@ -232,11 +284,12 @@ namespace ASQ_DB
                 parameter.Value = telemetryData["Bank"];
                 command.Parameters.Add(parameter);
 
+                // Save newly created AttitudeID for FlightData table
                 int attidueId = (int)command.ExecuteScalar();
 
-                // smalldatatime 
+                // Insert the newly created IDs from the other tables into linking table 
                 command.CommandText = @"
-                INSERT INTO flight_data
+                INSERT INTO FlightData
                 (AircraftID,
                  GforceID,
                  AttitdueID,
@@ -245,7 +298,7 @@ namespace ASQ_DB
                 (@AircraftID,
                  @GforceID,
                  @AttitdueID,
-                 GETDATE() AS smalldatetime);";
+                 GETDATE());";
                 parameter = new QC.SqlParameter("@AircraftID", DT.SqlDbType.Int);
                 parameter.Value = telemetryData["AircraftID"];
                 command.Parameters.Add(parameter);
@@ -259,18 +312,30 @@ namespace ASQ_DB
                 command.Parameters.Add(parameter);
 
                 command.ExecuteScalar();
-
-
             }
+
+            // For live update get newest data
+            List<TelemData> tData = new List<TelemData>();
+            tData = SelectFlightData(connection);
+            return tData;
+
+
         }
+
         /*
-         * This function takes the aircraft tail of the desire aircraft and writes the file
-         * TODO right now for some reason the storagetime has an am/pm at the end will look to remove
+         * FUNCTION    : OutputAircraftFile
+         * DESCRIPTION :
+         *  Writes an ASCII file for a selected aircraft
+         * PARAMETERS  :
+         * string aircraft : Name of the aircraft for desired file
+         * RETURNS     : None
          */
-        public void writeFile(string aircraftTail)
+        public void OutputAircraftFile(string aircraftTail)
         {
             List<TelemData> tData = this.FlightDataTableConnection(aircraftTail);
             string path = aircraftTail + ".txt";
+
+            // Checks if a file already exists for the the aircraft if it doesn't create else append
             if (!File.Exists(path))
             {
                 using (StreamWriter sw = File.CreateText(path))
@@ -281,7 +346,16 @@ namespace ASQ_DB
                     }
                 }
             }
-
+            else
+            {
+                using (StreamWriter sw = new StreamWriter(path, true))
+                {
+                    foreach (TelemData t in tData)
+                    {
+                        sw.WriteLine("{0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}", t.StorageTime, t.X, t.Y, t.Z, t.Weight, t.Altitude, t.Pitch, t.Bank);
+                    }
+                }
+            }
         }
     }
 }
