@@ -1,4 +1,4 @@
-﻿/*
+/*
  * FILE            : DatabaseController.cs
  * PROJECT         : Flight Data Management System
  * PROGRAMMER      : Daniel Treacy, ASQ Group 4
@@ -13,13 +13,15 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using DT = System.Data;
 using QC = Microsoft.Data.SqlClient;
 
-namespace ASQ_DB
+namespace AircraftTelemetry
 {
-     class DatabaseController
+    class DatabaseController
     {
+        private static readonly string ConnectionString = "Server=tcp:asq.database.windows.net,1433;Initial Catalog=asqDB;Persist Security Info=False;User ID=asqg4;Password=TsvVJDCMs2StwkF;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
 
         /*
          * FUNCTION    : FlightDataTableConnection
@@ -146,7 +148,7 @@ namespace ASQ_DB
                     tData.Add(new TelemData()
                     {
                         //Data was returning time with whitespace and AM/PM, so it was removed
-                        StorageTime = reader.GetDateTime(0).ToString().Remove(reader.GetDateTime(0).ToString().Length-3,3),
+                        StorageTime = reader.GetDateTime(0).ToString().Remove(reader.GetDateTime(0).ToString().Length - 3, 3),
                         AircraftTailNumber = reader.GetString(1),
                         Altitude = (float)reader.GetSqlDouble(2),
                         Bank = (float)reader.GetSqlDouble(3),
@@ -157,7 +159,7 @@ namespace ASQ_DB
                         Weight = (float)reader.GetSqlDouble(8),
                     });
                 }
- 
+
                 return tData;
             }
         }
@@ -178,9 +180,9 @@ namespace ASQ_DB
          * RETURNS     :
          *  List<TelemData> : Holds the most recent update of the database after the insert.
          */
-        public List<TelemData> InsertConnection(Dictionary<string,string> telemetryData)
+        public TelemData InsertConnection(Dictionary<string, string> telemetryData)
         {
-            List<TelemData> tData = new List<TelemData>();
+            TelemData tData = new TelemData();
 
             // Convert Aircraft name to ID
             switch (telemetryData["Aircraft"])
@@ -221,7 +223,7 @@ namespace ASQ_DB
          * RETURNS     :
          *  List<TelemData> : Returns the newly updated database rows of all aircraft
          */
-        public static List<TelemData> InsertTelemetry(QC.SqlConnection connection, Dictionary<string, string> telemetryData)
+        public static TelemData InsertTelemetry(QC.SqlConnection connection, Dictionary<string, string> telemetryData)
         {
             QC.SqlParameter parameter;
             using (var command = new QC.SqlCommand())
@@ -317,7 +319,7 @@ namespace ASQ_DB
             // For live update get newest data
             List<TelemData> tData = new List<TelemData>();
             tData = SelectFlightData(connection);
-            return tData;
+            return tData.LastOrDefault();
 
 
         }
