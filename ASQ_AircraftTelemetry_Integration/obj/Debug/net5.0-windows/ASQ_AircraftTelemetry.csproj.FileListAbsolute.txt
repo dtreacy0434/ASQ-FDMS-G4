@@ -1,0 +1,94 @@
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\bin\Debug\net5.0-windows\ASQ_AircraftTelemetry.exe
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\bin\Debug\net5.0-windows\ASQ_AircraftTelemetry.deps.json
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\bin\Debug\net5.0-windows\ASQ_AircraftTelemetry.runtimeconfig.json
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\bin\Debug\net5.0-windows\ASQ_AircraftTelemetry.runtimeconfig.dev.json
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\bin\Debug\net5.0-windows\ASQ_AircraftTelemetry.dll
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\bin\Debug\net5.0-windows\ref\ASQ_AircraftTelemetry.dll
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\bin\Debug\net5.0-windows\ASQ_AircraftTelemetry.pdb
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\bin\Debug\net5.0-windows\Azure.Core.dll
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\bin\Debug\net5.0-windows\Azure.Identity.dll
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\bin\Debug\net5.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\bin\Debug\net5.0-windows\Microsoft.Data.SqlClient.dll
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\bin\Debug\net5.0-windows\Microsoft.Identity.Client.dll
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\bin\Debug\net5.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\bin\Debug\net5.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\bin\Debug\net5.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\bin\Debug\net5.0-windows\System.Runtime.Caching.dll
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\bin\Debug\net5.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\bin\Debug\net5.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\bin\Debug\net5.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\bin\Debug\net5.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\obj\Debug\net5.0-windows\MainWindow.g.cs
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\obj\Debug\net5.0-windows\RealTimeView.g.cs
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\obj\Debug\net5.0-windows\SearchView.g.cs
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\obj\Debug\net5.0-windows\App.g.cs
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\obj\Debug\net5.0-windows\ASQ_AircraftTelemetry_MarkupCompile.cache
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\obj\Debug\net5.0-windows\ASQ_AircraftTelemetry_MarkupCompile.lref
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\obj\Debug\net5.0-windows\MainWindow.baml
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\obj\Debug\net5.0-windows\RealTimeView.baml
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\obj\Debug\net5.0-windows\SearchView.baml
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\obj\Debug\net5.0-windows\ASQ_AircraftTelemetry.g.resources
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\obj\Debug\net5.0-windows\ASQ_AircraftTelemetry.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\obj\Debug\net5.0-windows\ASQ_AircraftTelemetry.AssemblyInfoInputs.cache
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\obj\Debug\net5.0-windows\ASQ_AircraftTelemetry.AssemblyInfo.cs
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\obj\Debug\net5.0-windows\ASQ_AircraftTelemetry.csproj.CoreCompileInputs.cache
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\obj\Debug\net5.0-windows\ASQ_AircraftTelemetry.dll
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\obj\Debug\net5.0-windows\ref\ASQ_AircraftTelemetry.dll
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\obj\Debug\net5.0-windows\ASQ_AircraftTelemetry.pdb
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\obj\Debug\net5.0-windows\ASQ_AircraftTelemetry.genruntimeconfig.cache
+C:\Users\Katas\source\repos\ASQ_AircraftTelemetry\obj\Debug\net5.0-windows\ASQ_AircraftTelemetry.csproj.AssemblyReference.cache
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\bin\Debug\net5.0-windows\ASQ_AircraftTelemetry.exe
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\bin\Debug\net5.0-windows\ASQ_AircraftTelemetry.deps.json
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\bin\Debug\net5.0-windows\ASQ_AircraftTelemetry.runtimeconfig.json
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\bin\Debug\net5.0-windows\ASQ_AircraftTelemetry.runtimeconfig.dev.json
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\bin\Debug\net5.0-windows\ASQ_AircraftTelemetry.dll
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\bin\Debug\net5.0-windows\ref\ASQ_AircraftTelemetry.dll
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\bin\Debug\net5.0-windows\ASQ_AircraftTelemetry.pdb
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\bin\Debug\net5.0-windows\Azure.Core.dll
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\bin\Debug\net5.0-windows\Azure.Identity.dll
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\bin\Debug\net5.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\bin\Debug\net5.0-windows\Microsoft.Data.SqlClient.dll
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\bin\Debug\net5.0-windows\Microsoft.Identity.Client.dll
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\bin\Debug\net5.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\bin\Debug\net5.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Logging.dll
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.dll
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\bin\Debug\net5.0-windows\Microsoft.IdentityModel.Tokens.dll
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\bin\Debug\net5.0-windows\System.IdentityModel.Tokens.Jwt.dll
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\bin\Debug\net5.0-windows\System.Runtime.Caching.dll
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\bin\Debug\net5.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\bin\Debug\net5.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\bin\Debug\net5.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\bin\Debug\net5.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\obj\Debug\net5.0-windows\ASQ_AircraftTelemetry.csproj.AssemblyReference.cache
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\obj\Debug\net5.0-windows\MainWindow.g.cs
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\obj\Debug\net5.0-windows\RealTimeView.g.cs
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\obj\Debug\net5.0-windows\SearchView.g.cs
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\obj\Debug\net5.0-windows\App.g.cs
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\obj\Debug\net5.0-windows\ASQ_AircraftTelemetry_MarkupCompile.cache
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\obj\Debug\net5.0-windows\ASQ_AircraftTelemetry_MarkupCompile.lref
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\obj\Debug\net5.0-windows\MainWindow.baml
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\obj\Debug\net5.0-windows\RealTimeView.baml
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\obj\Debug\net5.0-windows\SearchView.baml
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\obj\Debug\net5.0-windows\ASQ_AircraftTelemetry.g.resources
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\obj\Debug\net5.0-windows\ASQ_AircraftTelemetry.GeneratedMSBuildEditorConfig.editorconfig
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\obj\Debug\net5.0-windows\ASQ_AircraftTelemetry.AssemblyInfoInputs.cache
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\obj\Debug\net5.0-windows\ASQ_AircraftTelemetry.AssemblyInfo.cs
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\obj\Debug\net5.0-windows\ASQ_AircraftTelemetry.csproj.CoreCompileInputs.cache
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\obj\Debug\net5.0-windows\ASQ_AircraftTelemetry.dll
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\obj\Debug\net5.0-windows\ref\ASQ_AircraftTelemetry.dll
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\obj\Debug\net5.0-windows\ASQ_AircraftTelemetry.pdb
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\obj\Debug\net5.0-windows\ASQ_AircraftTelemetry.genruntimeconfig.cache
