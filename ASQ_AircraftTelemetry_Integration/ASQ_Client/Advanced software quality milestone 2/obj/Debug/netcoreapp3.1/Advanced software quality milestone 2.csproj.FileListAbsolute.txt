@@ -1,0 +1,13 @@
+C:\Users\alexp\source\repos\Advanced software quality milestone 2\Advanced software quality milestone 2\bin\Debug\netcoreapp3.1\Advanced software quality milestone 2.exe
+C:\Users\alexp\source\repos\Advanced software quality milestone 2\Advanced software quality milestone 2\bin\Debug\netcoreapp3.1\Advanced software quality milestone 2.deps.json
+C:\Users\alexp\source\repos\Advanced software quality milestone 2\Advanced software quality milestone 2\bin\Debug\netcoreapp3.1\Advanced software quality milestone 2.runtimeconfig.json
+C:\Users\alexp\source\repos\Advanced software quality milestone 2\Advanced software quality milestone 2\bin\Debug\netcoreapp3.1\Advanced software quality milestone 2.runtimeconfig.dev.json
+C:\Users\alexp\source\repos\Advanced software quality milestone 2\Advanced software quality milestone 2\bin\Debug\netcoreapp3.1\Advanced software quality milestone 2.dll
+C:\Users\alexp\source\repos\Advanced software quality milestone 2\Advanced software quality milestone 2\bin\Debug\netcoreapp3.1\Advanced software quality milestone 2.pdb
+C:\Users\alexp\source\repos\Advanced software quality milestone 2\Advanced software quality milestone 2\obj\Debug\netcoreapp3.1\Advanced software quality milestone 2.csprojAssemblyReference.cache
+C:\Users\alexp\source\repos\Advanced software quality milestone 2\Advanced software quality milestone 2\obj\Debug\netcoreapp3.1\Advanced software quality milestone 2.AssemblyInfoInputs.cache
+C:\Users\alexp\source\repos\Advanced software quality milestone 2\Advanced software quality milestone 2\obj\Debug\netcoreapp3.1\Advanced software quality milestone 2.AssemblyInfo.cs
+C:\Users\alexp\source\repos\Advanced software quality milestone 2\Advanced software quality milestone 2\obj\Debug\netcoreapp3.1\Advanced software quality milestone 2.csproj.CoreCompileInputs.cache
+C:\Users\alexp\source\repos\Advanced software quality milestone 2\Advanced software quality milestone 2\obj\Debug\netcoreapp3.1\Advanced software quality milestone 2.dll
+C:\Users\alexp\source\repos\Advanced software quality milestone 2\Advanced software quality milestone 2\obj\Debug\netcoreapp3.1\Advanced software quality milestone 2.pdb
+C:\Users\alexp\source\repos\Advanced software quality milestone 2\Advanced software quality milestone 2\obj\Debug\netcoreapp3.1\Advanced software quality milestone 2.genruntimeconfig.cache

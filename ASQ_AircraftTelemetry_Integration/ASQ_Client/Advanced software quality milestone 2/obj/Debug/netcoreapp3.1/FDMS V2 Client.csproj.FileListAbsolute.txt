@@ -1,0 +1,28 @@
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\Advanced software quality milestone 2\Advanced software quality milestone 2\bin\Debug\netcoreapp3.1\FDMS V2 Client.exe
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\Advanced software quality milestone 2\Advanced software quality milestone 2\bin\Debug\netcoreapp3.1\FDMS V2 Client.deps.json
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\Advanced software quality milestone 2\Advanced software quality milestone 2\bin\Debug\netcoreapp3.1\FDMS V2 Client.runtimeconfig.json
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\Advanced software quality milestone 2\Advanced software quality milestone 2\bin\Debug\netcoreapp3.1\FDMS V2 Client.runtimeconfig.dev.json
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\Advanced software quality milestone 2\Advanced software quality milestone 2\bin\Debug\netcoreapp3.1\FDMS V2 Client.dll
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\Advanced software quality milestone 2\Advanced software quality milestone 2\bin\Debug\netcoreapp3.1\FDMS V2 Client.pdb
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\Advanced software quality milestone 2\Advanced software quality milestone 2\obj\Debug\netcoreapp3.1\FDMS V2 Client.csproj.AssemblyReference.cache
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\Advanced software quality milestone 2\Advanced software quality milestone 2\obj\Debug\netcoreapp3.1\FDMS V2 Client.GeneratedMSBuildEditorConfig.editorconfig
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\Advanced software quality milestone 2\Advanced software quality milestone 2\obj\Debug\netcoreapp3.1\FDMS V2 Client.AssemblyInfoInputs.cache
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\Advanced software quality milestone 2\Advanced software quality milestone 2\obj\Debug\netcoreapp3.1\FDMS V2 Client.AssemblyInfo.cs
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\Advanced software quality milestone 2\Advanced software quality milestone 2\obj\Debug\netcoreapp3.1\FDMS V2 Client.csproj.CoreCompileInputs.cache
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\Advanced software quality milestone 2\Advanced software quality milestone 2\obj\Debug\netcoreapp3.1\FDMS V2 Client.dll
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\Advanced software quality milestone 2\Advanced software quality milestone 2\obj\Debug\netcoreapp3.1\FDMS V2 Client.pdb
+D:\Chrome Downloads\ASQ_AircraftTelemetry (1)\Advanced software quality milestone 2\Advanced software quality milestone 2\obj\Debug\netcoreapp3.1\FDMS V2 Client.genruntimeconfig.cache
+D:\Chrome Downloads\Advanced software quality milestone 2\Advanced software quality milestone 2\bin\Debug\netcoreapp3.1\FDMS V2 Client.exe
+D:\Chrome Downloads\Advanced software quality milestone 2\Advanced software quality milestone 2\bin\Debug\netcoreapp3.1\FDMS V2 Client.deps.json
+D:\Chrome Downloads\Advanced software quality milestone 2\Advanced software quality milestone 2\bin\Debug\netcoreapp3.1\FDMS V2 Client.runtimeconfig.json
+D:\Chrome Downloads\Advanced software quality milestone 2\Advanced software quality milestone 2\bin\Debug\netcoreapp3.1\FDMS V2 Client.runtimeconfig.dev.json
+D:\Chrome Downloads\Advanced software quality milestone 2\Advanced software quality milestone 2\bin\Debug\netcoreapp3.1\FDMS V2 Client.dll
+D:\Chrome Downloads\Advanced software quality milestone 2\Advanced software quality milestone 2\bin\Debug\netcoreapp3.1\FDMS V2 Client.pdb
+D:\Chrome Downloads\Advanced software quality milestone 2\Advanced software quality milestone 2\obj\Debug\netcoreapp3.1\FDMS V2 Client.csproj.AssemblyReference.cache
+D:\Chrome Downloads\Advanced software quality milestone 2\Advanced software quality milestone 2\obj\Debug\netcoreapp3.1\FDMS V2 Client.GeneratedMSBuildEditorConfig.editorconfig
+D:\Chrome Downloads\Advanced software quality milestone 2\Advanced software quality milestone 2\obj\Debug\netcoreapp3.1\FDMS V2 Client.AssemblyInfoInputs.cache
+D:\Chrome Downloads\Advanced software quality milestone 2\Advanced software quality milestone 2\obj\Debug\netcoreapp3.1\FDMS V2 Client.AssemblyInfo.cs
+D:\Chrome Downloads\Advanced software quality milestone 2\Advanced software quality milestone 2\obj\Debug\netcoreapp3.1\FDMS V2 Client.csproj.CoreCompileInputs.cache
+D:\Chrome Downloads\Advanced software quality milestone 2\Advanced software quality milestone 2\obj\Debug\netcoreapp3.1\FDMS V2 Client.dll
+D:\Chrome Downloads\Advanced software quality milestone 2\Advanced software quality milestone 2\obj\Debug\netcoreapp3.1\FDMS V2 Client.pdb
+D:\Chrome Downloads\Advanced software quality milestone 2\Advanced software quality milestone 2\obj\Debug\netcoreapp3.1\FDMS V2 Client.genruntimeconfig.cache
