@@ -172,6 +172,8 @@ namespace AircraftTelemetry
                     state.buffer, 0, bytesRead));
 
                     content = state.sb.ToString();
+                    
+                    state.sb.clear();                                                           // Clears the string builder for next input
 
                     TelemData tData;
                     string[] tempDataArray = content.Split(';');                                // Split to tail#, seq#, telemData, checksum
