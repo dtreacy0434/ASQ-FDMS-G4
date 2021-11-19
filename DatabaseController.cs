@@ -66,6 +66,15 @@ namespace AircraftTelemetry
             }
         }
 
+        /*
+         * FUNCTION    : FlightDataTableConnectionLive
+         * DESCRIPTION : 
+         *  This function writes the SQL query to retrive the telemetary data from the aircraft wnats the live data.
+         * PARAMETERS  : 
+         *  string aircraftTail : The call sign of the desired aircraft.
+         * RETURNS     : 
+         *  List<TelemData> : List representation from all rows with the flight data of a specific aircraft.
+         */
         public TelemData FlightDataTableConnectionLive(string aircraftTail)
         {
             using (var connection = new QC.SqlConnection(ConnectionString))
@@ -75,6 +84,11 @@ namespace AircraftTelemetry
                 List<TelemData> tData = SelectAircraftFlightData(connection, aircraftTail);
                 connection.Close();
                 Console.WriteLine("Closed connection");
+                if (tData.Count == 0)
+                {
+                    tData.Add(new TelemData()); ;
+                    return tData.Last();
+                }
                 return tData.Last();
             }
         }
@@ -313,7 +327,7 @@ namespace AircraftTelemetry
                 (@AircraftID,
                  @GforceID,
                  @AttitdueID,
-                 GETDATE());";
+                 GETDATE() AT TIME ZONE 'UTC' AT TIME ZONE 'Eastern Standard Time');";
                 parameter = new QC.SqlParameter("@AircraftID", DT.SqlDbType.Int);
                 parameter.Value = telemetryData["AircraftID"];
                 command.Parameters.Add(parameter);

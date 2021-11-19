@@ -44,13 +44,14 @@ namespace AircraftTelemetry
         {
             LiveTimeLabel.Content = DateTime.Now.ToString("yyyy/mm/dd HH:mm:ss");
 
-            string aircraftTailNo = cboAircraft.Text;
 
             if (cboAircraft.SelectedItem != null)
             {
+                var boxSelected = (ComboBoxItem)cboAircraft.SelectedItem;
+                var aircraftTailNo = boxSelected.Tag.ToString();
                 DatabaseController _ = new DatabaseController();
                 TelemData data = new TelemData();
-                //data = _.FlightDataTableConnectionLive(aircraftTailNo);
+                data = _.FlightDataTableConnectionLive(aircraftTailNo);
                 txtAccelX.Text = data.X.ToString();
                 txtAccelY.Text = data.Y.ToString();
                 txtAccelZ.Text = data.Z.ToString();

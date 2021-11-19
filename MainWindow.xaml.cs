@@ -23,8 +23,9 @@ namespace AircraftTelemetry
         public MainWindow()
         {
             InitializeComponent();
-            TcpConnection tcpConnection = new TcpConnection();
-            TcpConnection.StartListening();
+            Server server = new Server("10.0.0.122", 7000);
+            //TcpConnection tcpConnection = new TcpConnection();
+            //TcpConnection.StartListening();
 
         }
     }

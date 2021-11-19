@@ -31,17 +31,17 @@
         <TextBlock Grid.Row="1" Grid.Column="1" Text="Aircraft" Foreground="AntiqueWhite" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5" FontSize="20"/>
         <StackPanel Grid.Row="1" Grid.Column="1" Background="AntiqueWhite" Height="20" Width="200" HorizontalAlignment="Right" Margin="0,0,30,0">
             <ComboBox Name="cboAircraft">
-                <ComboBoxItem>
+                <ComboBoxItem Tag="C-FGAX">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Foreground="Black">C-FGAX</TextBlock>
                     </StackPanel>
                 </ComboBoxItem>
-                <ComboBoxItem>
+                <ComboBoxItem Tag="C-GEFC">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Foreground="Black">C-GEFC</TextBlock>
                     </StackPanel>
                 </ComboBoxItem>
-                <ComboBoxItem>
+                <ComboBoxItem Tag="C-QWWT">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Foreground="Black">C-QWWT</TextBlock>
                     </StackPanel>
