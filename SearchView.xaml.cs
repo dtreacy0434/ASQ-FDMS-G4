@@ -108,6 +108,22 @@ namespace AircraftTelemetry
             SearchInputBox.Visibility = Visibility.Collapsed;
         }
 
+
+
+        /*
+         * FUNCTION : BtnLog_Click()
+         * DESCRIPTION : Button Click event handler for Log Button
+         * PARAMETERS : object sender, RoutedEventArgs e
+         * RETURNS : N/A
+         */
+        private void BtnLog_Click(object sender, RoutedEventArgs e)
+        {
+            string aircraftTailNo = InputTextBox.Text.ToUpper();
+
+            DatabaseController dbController = new DatabaseController();
+            dbController.OutputAircraftFile(aircraftTailNo);
+        }
+
         public SearchView()
         {
             InitializeComponent();
