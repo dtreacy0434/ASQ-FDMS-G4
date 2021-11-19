@@ -172,7 +172,7 @@ namespace AircraftTelemetry
                     state.buffer, 0, bytesRead));
 
                     content = state.sb.ToString();
-
+                    state.sb.Clear();
                     TelemData tData;
                     string[] tempDataArray = content.Split(';');                                // Split to tail#, seq#, telemData, checksum
                     string[] telemDataTokens = tempDataArray[3].Split(',');                        // Split telemData into tokens

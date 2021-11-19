@@ -46,11 +46,11 @@ namespace AircraftTelemetry
 
             string aircraftTailNo = cboAircraft.Text;
 
-            if (cboAircraft.SelectedIndex > -1)
+            if (cboAircraft.SelectedItem != null)
             {
                 DatabaseController _ = new DatabaseController();
                 TelemData data = new TelemData();
-                data = _.FlightDataTableConnectionLive(aircraftTailNo);
+                //data = _.FlightDataTableConnectionLive(aircraftTailNo);
                 txtAccelX.Text = data.X.ToString();
                 txtAccelY.Text = data.Y.ToString();
                 txtAccelZ.Text = data.Z.ToString();
