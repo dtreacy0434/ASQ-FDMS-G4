@@ -1,4 +1,16 @@
-﻿using System;
+﻿//* FILE : Server.cs
+//* PROJECT : SENG3020 - FDMS Ground Terminal System
+//* PROGRAMMER : Stephen Perrin, Faith Madore, Alex Palmer, Daniel Treacy
+//* FIRST VERSION : 2021-11-11
+//* DESCRIPTION :
+//* The functions in this file are used to create a asyncronous TCP/IP Socket server. The server
+//* handles getting data from the client, parses it into readable tokens, and returns the parsed
+//* data through an event handler.
+//*/
+
+
+
+using System;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
@@ -17,6 +29,7 @@ namespace AircraftTelemetry
             IPAddress localAddr = IPAddress.Parse(ip);
             server = new TcpListener(localAddr, port);
             server.Start();
+            //Spawns a thread to allow the system to continue running
             Thread t = new Thread(new ParameterizedThreadStart(StartListener));
             t.Start();
         }
@@ -46,9 +59,8 @@ namespace AircraftTelemetry
             //grab stream
             TcpClient client = (TcpClient)obj;
             var stream = client.GetStream();
-            string imei = String.Empty;
 
-            string data = null;
+            string data;
             Byte[] bytes = new Byte[150];
             int i;
             try
@@ -56,20 +68,19 @@ namespace AircraftTelemetry
                 // read split and organize data
                 while ((i = stream.Read(bytes, 0, 150)) != 0)
                 {
-                    string hex = BitConverter.ToString(bytes);
+                    
                     data = Encoding.ASCII.GetString(bytes, 0, i);
                     Console.WriteLine("{1}: Received: {0}", data, Thread.CurrentThread.ManagedThreadId);
-                    data = data.Trim('@'); ;
+                    data = data.Trim('@');
                     string[] array = data.Split(';');
                     // add function to add to database here
                     TelemData tData = new TelemData(array[0], float.Parse(array[3]), float.Parse(array[4]), float.Parse(array[5]), float.Parse(array[6]), float.Parse(array[7]), float.Parse(array[8]), float.Parse(array[9]));
-                    DatabaseController databaseController = new DatabaseController();
                     //Add checksum
                     int checksumSent = int.Parse(array[10]);
                     int checksumCalc = (int)Math.Ceiling((float.Parse(array[7]) + float.Parse(array[8]) + float.Parse(array[9])) / 3);
                     if (checksumCalc == checksumSent)
                     {
-                        databaseController.InsertConnection(tData.ConvertToDictionary());
+                        DatabaseController.InsertConnection(tData.ConvertToDictionary());
                     }
 
                 }

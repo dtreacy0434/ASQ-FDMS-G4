@@ -19,7 +19,7 @@ using QC = Microsoft.Data.SqlClient;
 
 namespace AircraftTelemetry
 {
-    class DatabaseController
+    static class DatabaseController
     {
         private static readonly string ConnectionString = "Server=tcp:asq.database.windows.net,1433;Initial Catalog=asqDB;Persist Security Info=False;User ID=asqg4;Password=TsvVJDCMs2StwkF;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
 
@@ -31,7 +31,7 @@ namespace AircraftTelemetry
          * RETURNS     : 
          *  List<TelemData> : List representation from all rows with the flight data.
          */
-        public List<TelemData> FlightDataTableConnection()
+        public static List<TelemData> FlightDataTableConnection()
         {
             using (var connection = new QC.SqlConnection(ConnectionString))
             {
@@ -53,7 +53,7 @@ namespace AircraftTelemetry
          * RETURNS     : 
          *  List<TelemData> : List representation from all rows with the flight data of a specific aircraft.
          */
-        public List<TelemData> FlightDataTableConnection(string aircraftTail)
+        public static List<TelemData> FlightDataTableConnection(string aircraftTail)
         {
             using (var connection = new QC.SqlConnection(ConnectionString))
             {
@@ -75,7 +75,7 @@ namespace AircraftTelemetry
          * RETURNS     : 
          *  List<TelemData> : List representation from all rows with the flight data of a specific aircraft.
          */
-        public TelemData FlightDataTableConnectionLive(string aircraftTail)
+        public static TelemData FlightDataTableConnectionLive(string aircraftTail)
         {
             using (var connection = new QC.SqlConnection(ConnectionString))
             {
@@ -86,7 +86,7 @@ namespace AircraftTelemetry
                 Console.WriteLine("Closed connection");
                 if (tData.Count == 0)
                 {
-                    tData.Add(new TelemData()); ;
+                    tData.Add(new TelemData());
                     return tData.Last();
                 }
                 return tData.Last();
@@ -207,9 +207,9 @@ namespace AircraftTelemetry
          * RETURNS     :
          *  List<TelemData> : Holds the most recent update of the database after the insert.
          */
-        public TelemData InsertConnection(Dictionary<string, string> telemetryData)
+        public static TelemData InsertConnection(Dictionary<string, string> telemetryData)
         {
-            TelemData tData = new TelemData();
+            
 
             // Convert Aircraft name to ID
             switch (telemetryData["AircraftTailNumber"])
@@ -225,9 +225,9 @@ namespace AircraftTelemetry
                     break;
                 default:
                     Console.WriteLine("Unknown Aircraft");
-                    return tData = null;
+                    return null;
             }
-
+            TelemData tData;
             using (var connection = new QC.SqlConnection(ConnectionString))
             {
                 connection.Open();
@@ -344,8 +344,7 @@ namespace AircraftTelemetry
             }
 
             // For live update get newest data
-            List<TelemData> tData = new List<TelemData>();
-            tData = SelectFlightData(connection);
+            List <TelemData> tData = SelectFlightData(connection);
             return tData.LastOrDefault();
 
 
@@ -359,9 +358,9 @@ namespace AircraftTelemetry
          * string aircraft : Name of the aircraft for desired file
          * RETURNS     : None
          */
-        public void OutputAircraftFile(string aircraftTail)
+        public static void OutputAircraftFile(string aircraftTail)
         {
-            List<TelemData> tData = this.FlightDataTableConnection(aircraftTail);
+            List<TelemData> tData = DatabaseController.FlightDataTableConnection(aircraftTail);
             string path = aircraftTail + ".txt";
 
             // Checks if a file already exists for the the aircraft if it doesn't create else append

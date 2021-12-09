@@ -49,9 +49,7 @@ namespace AircraftTelemetry
             {
                 var boxSelected = (ComboBoxItem)cboAircraft.SelectedItem;
                 var aircraftTailNo = boxSelected.Tag.ToString();
-                DatabaseController _ = new DatabaseController();
-                TelemData data = new TelemData();
-                data = _.FlightDataTableConnectionLive(aircraftTailNo);
+                TelemData data = DatabaseController.FlightDataTableConnectionLive(aircraftTailNo);
                 txtAccelX.Text = data.X.ToString();
                 txtAccelY.Text = data.Y.ToString();
                 txtAccelZ.Text = data.Z.ToString();

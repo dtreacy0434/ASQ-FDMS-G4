@@ -23,10 +23,7 @@ namespace AircraftTelemetry
         public MainWindow()
         {
             InitializeComponent();
-            Server server = new Server("10.0.0.122", 7000);
-            //TcpConnection tcpConnection = new TcpConnection();
-            //TcpConnection.StartListening();
-
+            _ = new Server("127.0.0.1", 7000);
         }
     }
 }

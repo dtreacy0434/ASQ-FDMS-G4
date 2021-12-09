@@ -19,8 +19,8 @@ namespace AircraftTelemetry
         private ICommand _gotoRealTimeCommand;
         private ICommand _gotoSearchCommand;
         private object _currentView;
-        private object _realTimeView;
-        private object _searchView;
+        private readonly object _realTimeView;
+        private readonly object _searchView;
 
         public MainWindowViewModel()
         {

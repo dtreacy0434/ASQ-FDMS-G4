@@ -88,9 +88,7 @@ namespace AircraftTelemetry
         {
             FlightTailNo.Text = "Aircraft Tail Number: " + aircraftTailNo;
 
-            DatabaseController dbController = new DatabaseController();
-            List<TelemData> tData = new List<TelemData>();
-            tData = dbController.FlightDataTableConnection(aircraftTailNo);
+            List<TelemData> tData = DatabaseController.FlightDataTableConnection(aircraftTailNo);
 
             FlightDataGrid.ItemsSource = tData;
         }
@@ -120,8 +118,7 @@ namespace AircraftTelemetry
         {
             string aircraftTailNo = InputTextBox.Text.ToUpper();
 
-            DatabaseController dbController = new DatabaseController();
-            dbController.OutputAircraftFile(aircraftTailNo);
+            DatabaseController.OutputAircraftFile(aircraftTailNo);
         }
 
         public SearchView()
