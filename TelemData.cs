@@ -46,10 +46,10 @@ namespace AircraftTelemetry
         * RETURNS :
         *   N/A
         */
-        public TelemData(string tn, float _x, float _y, float _z, float w, float alt, float p, float b)
+        public TelemData(string tn, string st, float _x, float _y, float _z, float w, float alt, float p, float b)
         {
             AircraftTailNumber = tn;
-            StorageTime = null;
+            StorageTime = st;
             X = _x;
             Y = _y;
             Z = _z;
@@ -76,6 +76,7 @@ namespace AircraftTelemetry
 
             // Converts data members to strings and adds them to the return dictionary
             retDict.Add("AircraftTailNumber", AircraftTailNumber.ToString());
+            retDict.Add("StorageTime", StorageTime.ToString());
             retDict.Add("X", X.ToString());
             retDict.Add("Y", Y.ToString());
             retDict.Add("Z", Z.ToString());

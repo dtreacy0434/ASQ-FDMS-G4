@@ -75,7 +75,7 @@ namespace AircraftTelemetry
          * RETURNS     : 
          *  List<TelemData> : List representation from all rows with the flight data of a specific aircraft.
          */
-        public static TelemData FlightDataTableConnectionLive(string aircraftTail)
+        public TelemData FlightDataTableConnectionLive(string aircraftTail)
         {
             using (var connection = new QC.SqlConnection(ConnectionString))
             {
@@ -327,7 +327,7 @@ namespace AircraftTelemetry
                 (@AircraftID,
                  @GforceID,
                  @AttitdueID,
-                 GETDATE() AT TIME ZONE 'UTC' AT TIME ZONE 'Eastern Standard Time');";
+                 GETDATE());";
                 parameter = new QC.SqlParameter("@AircraftID", DT.SqlDbType.Int);
                 parameter.Value = telemetryData["AircraftID"];
                 command.Parameters.Add(parameter);
